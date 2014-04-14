@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ZeroBlog</title>
+  <%= stylesheet_link_tag    "application", media: "all",
+  	 "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body class='<%= controller.controller_name %>'>
+	<div id="banner">
+		<%= image_tag("lightbulbOne.png") %>
+		<%= @page_title || "Zero Creativity" %>
+	</div>
+	<div id="columns">
+		<div id="top">
+			<ul>
+				<li><a href="http://www..../">Home</a></li>
+				<li><a href="http://www..../projects">Projects</a></li>
+				<li><a href="http://www..../team">Team</a></li>
+				<li><a href="http://www..../contact">Contact</a></li>
+				<li><a href= <%= login_path %>>Admin</a></li>
+			</ul>
+			<% if session[:user_id] %>
+				<ul>
+					<li><%= link_to 'Articles', articles_path %></li>
+					<li><%= link_to 'Users', users_path %></li>
+				</ul>
+				<div class="lo">
+					<%= button_to 'Logout', logout_path, method: :delete %>
+					<% end %>
+				</div>
+		</div>
+		<div id="side">
+			
+		</div>
+		<div id="main">
+			<%= yield %>
+		</div>
+	</div>
+</body>
+</html>

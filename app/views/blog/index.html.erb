@@ -1,0 +1,19 @@
+<% if notice %>
+<p id="notice"></p><%= notice %></p>
+<% end %>
+
+<h1>News and Info from the Team</h1>
+<div id="side">
+</div>
+<% @articles.each do |article| %>
+	<div class="entry">
+		<u><%= article.date %></u>
+		<h3><%= article.title %></h3><br/>
+		<%=sanitize(article.blog) %><br/>
+		<%= image_tag(article.image_url) %><br/>
+		<%= article.author %><br/>
+		<div class="cat"><u>Category</u>: <%= article.category %></div>
+	</div>
+<% end %>
+
+

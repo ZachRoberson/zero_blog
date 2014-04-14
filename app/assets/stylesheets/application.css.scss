@@ -1,0 +1,82 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+#banner {
+	background: black;
+	padding: 10px;
+	border-bottom: 2px solid black;
+	font: small-caps 50px/50px "Times New Roman", serif;
+	color: white;
+	text-align: center;
+	
+	
+	img {
+		float: left;
+		width: 110px;
+		margin-top: -15px;
+		margin-left: 10px;
+		margin-right: -50px;
+	}
+}
+
+.lo {
+	display: inline;
+	float: right;
+	margin-top: 20px;
+}
+
+#notice {
+	color: #000 !important;
+	border: 2px solid red;
+	padding: 1em;
+	margin-bottom: 2em;
+	background-color: #f0f0f0;
+	font: bold smaller sans-serif;
+}
+
+#columns {
+	background: black;
+	
+	#main {
+		margin-left: 9em;
+		padding: 1em;
+		background: white;
+	}
+	
+	#side {
+		float: left;
+		height: 100%;
+		width: 4px;
+		background: black;
+	}
+	
+	#top {
+		padding: 7px 5px;
+		background: black;
+
+		ul {
+			padding: 0.5em;
+			margin-left: 25%;
+			li {
+				list-style: none;
+				display: inline;
+				margin-right: 10%;
+				font-size: large;
+				a {
+					color: white;
+					font-size: large;
+				}
+			}
+		}
+	}
+}

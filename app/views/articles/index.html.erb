@@ -1,0 +1,48 @@
+<h1>Articles: Admin View</h1>
+<div class="create">
+<%= link_to 'New Article', new_article_path %>
+</div>
+<table>
+	<tr class="header">
+		
+		<td>Date</td>
+		<td>Blog Article</td>
+		<td colspan=2 class="auth">Author</td>
+		
+		<td>Category</td>
+		<td></td>
+	</tr>
+<% @articles.each do |article| %>
+	<tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+		
+		<td class="list_date">
+			<%= article.date %>
+		</td>
+		<td class="list_blog">
+			<dl>
+				<dt><%= article.title %></dt>
+				<dd><%= truncate(strip_tags(article.blog), length: 250) %></dd>
+			</dl>
+		</td>
+		<td>
+			<%= image_tag(article.image_url, class: 'list_image') %>
+		</td>
+		<td class="list_author">
+			<%= article.author %>
+		</td>
+		<td class="list_category">
+			<%= article.category %>
+		</td>
+		<td class="list_actions">
+			<%= link_to 'Show', article %><br/>
+			<%= link_to 'Edit', edit_article_path(article) %><br/>
+			<%= link_to 'Destroy', article, method: :delete,
+					data: { confirm: 'Are you sure?' } %>
+		</td>
+	</tr>
+<% end %>
+</table>
+
+<br />
+
+

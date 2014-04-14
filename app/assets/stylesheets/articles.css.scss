@@ -1,0 +1,94 @@
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.articles {
+  table {
+    border-collapse: collapse;
+  }
+  
+  table tr td {
+    padding: 5px;
+    vertical-align: top;
+  }
+  .header td {
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .list_title {
+    width: 15%;
+  }
+  
+  .list_date {
+    width: 10%;
+    border-right: 1px black solid;
+    border-left:  1px black solid;
+  }
+  
+  .list_blog {
+    width: 50%;
+    border-right: 1px black solid;
+    
+    dl {
+      margin: 0;
+    }
+    
+    dt {
+      color:  #244;
+      font-weight: bold;
+      font-size: larger;
+    }
+    
+    dd {
+      margin: 0;
+    }
+  }
+  
+  .list_image {
+    width: 60px;
+    height: 70px;
+    padding-left: 15px;
+    margin-right: -45px;
+  }
+  
+  .list_author {
+    width: 10%;
+  }
+  
+  .auth  {
+    padding-left: 25px;
+  }
+  
+  .list_category {
+    width: 10%;
+    border-left: 1px black solid;
+    padding-left: 10px;
+  }
+  
+  .list_actions {
+    font-size: x-small;
+    text-align: right;
+    padding-left: 1em;
+  }
+  
+  .list_line_even {
+    background: #9AFE2E;
+  }
+  
+  .list_line_odd {
+    background: #819FF7;
+  }
+  .create a{
+    font-size: large;
+    border: outset;
+    margin-right: 90%;
+    padding: 2px;
+    text-decoration: none;
+    color: black;
+  }
+  .create a:hover {
+    background-color: white;
+    border: inset;
+    color: black;
+  }
+}
